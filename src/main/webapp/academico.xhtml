@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<head>
+	<title>Sistema Acadêmico</title>
+</head>
+
+<body>
+	<h1>Histórico do Período do Aluno:</h1>
+
+	<h:form id="cadastroAluno">
+		<h:panelGrid columns="6">
+			<h:outputLabel value="Nota1:" for="nota1" styleClass="rotulos"/>
+			<h:inputText id="nota1" value="#{MBAluno.aluno.nota1}" styleClass="edit"/>
+			<h:outputLabel value="Nota2:" for="nota2" />
+			<h:inputText id="nota2" value="#{MBAluno.aluno.nota2}" />
+			<h:outputLabel value="Nota3:" for="nota3" />
+			<h:inputText id="nota3" value="#{MBAluno.aluno.nota3}" />
+			<h:outputLabel value="Prova Final:" for="provaFinal" />
+			<h:inputText id="provaFinal" disabled="#{MBAluno.statusCampoProvaFinal}" value="#{MBAluno.provaFinal}"/>
+			
+			<h:outputLabel value="Média Final:" for="mediaFinal" />
+			<h:inputText id="mediafinal" disabled="true" value="#{MBAluno.mediaFinal}"/>
+			<h:commandButton value="Calcular" id="buttonCalcular" action="#{MBAluno.calcularNotaAluno}" />
+		</h:panelGrid>
+		
+		<div id="divRodape" align="left">
+			<h:messages id="mensagensErro" styleClass="erros" style="#{MBAluno.corMensagem}"/>
+		</div>
+		 
+	</h:form>
+</body>
+</html>
