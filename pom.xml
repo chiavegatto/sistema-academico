@@ -5,12 +5,11 @@
 	<artifactId>sistema-academico</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sistema-academico Maven Webapp</name>
-	<url>http://maven.apache.org</url>
-
+	<name>Sistema-Academico</name>
 
 	<properties>
 		<cobertura.version>1.9.2</cobertura.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 	<dependencies>
@@ -18,7 +17,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -51,18 +50,12 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 		</dependency>
-		<!-- Tomcat 6 need this -->
+
+		<!-- Tomcat 6 -->
 		<dependency>
 			<groupId>com.sun.el</groupId>
 			<artifactId>el-ri</artifactId>
 			<version>1.0</version>
-		</dependency>
-
-		<!-- Prime faces -->
-		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>4.0</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -78,8 +71,9 @@
 			<plugin>
 				<groupId>org.pitest</groupId>
 				<artifactId>pitest-maven</artifactId>
-				<version>1.1.0</version>
+				<version>1.1.4</version>
 				<configuration>
+					<exportLineCoverage>true</exportLineCoverage>
 					<targetClasses>
 						<param>br.com.academico.Aluno</param>
 					</targetClasses>

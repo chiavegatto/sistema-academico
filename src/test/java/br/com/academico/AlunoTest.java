@@ -84,7 +84,7 @@ public class AlunoTest {
 		aluno.gerarMedia();
 		assertEquals(4.0, aluno.getMedia(), 0.001);
 	}
-	/*	
+
 	@Test
 	public void alunoAprovadoProvaFinalOpcional(){
 		aluno.setNota1(7.0);
@@ -114,5 +114,5 @@ public class AlunoTest {
 		aluno.gerarMedia();
 		aluno.setProvaFinal(2.0);
 		assertEquals("Reprovado Prova Final", aluno.getStatus());
-	}*/
+	}
 }
