@@ -80,6 +80,11 @@
 					<targetTests>
 						<param>br.com.academico.AlunoTest</param>
 					</targetTests>
+					<outputFormats>
+						<outputFormat>XML</outputFormat>
+						<outputFormat>HTML</outputFormat>
+						<outputFormat>CSV</outputFormat>
+					</outputFormats>
 				</configuration>
 			</plugin>
 			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>cobertura-maven-plugin</artifactId> 
