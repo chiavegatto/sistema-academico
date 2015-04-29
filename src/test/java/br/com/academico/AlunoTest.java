@@ -21,7 +21,7 @@ public class AlunoTest {
 		aluno.setNota2(2.0);
 		aluno.setNota3(2.0);
 		aluno.gerarMedia();
-		assertEquals("AproReprovado", aluno.getStatus());
+		assertEquals("Reprovado", aluno.getStatus());
 	}
 	
 	@Test
