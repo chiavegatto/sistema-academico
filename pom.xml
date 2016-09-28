@@ -8,6 +8,7 @@
 	<name>Sistema-Academico</name>
 
 	<properties>
+		<jdk.version>1.8</jdk.version>
 		<cobertura.version>1.9.2</cobertura.version>
 		<junit.version>4.12</junit.version>
 	</properties>
